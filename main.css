@@ -1,0 +1,23 @@
+*{
+    text-align: center
+}
+
+body{
+    background-color: rgb(58,48,115);
+    background-image: url("bg sb.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.anzeige{
+    background-color: rgba(232, 151, 122, .8);
+}
+
+#starter{
+    background-color: rgba(243, 181, 245, 1);
+}
+
+.progress{
+    margin: 10px;
+}
