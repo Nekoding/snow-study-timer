@@ -4,7 +4,9 @@ var running = false;
 var timer = $("#timer");
 var button = $("starter");
 var progress = $("#prog");
+var timeStudied = $("#timeStudied");
 var score = 0;
+var total = 0;
 
 
 function convertSecs(s) {
@@ -35,9 +37,12 @@ $("#starter").click(function () {
             progress.css({width:`${percent}%`});
             if (counter == timeLeft) {
                 clearInterval(interval);
+                progress.css({width:"0%"});
+                total += timeLeft;
                 timeLeft += 60;
-                timer.html(convertSecs(timeLeft));
                 counter = 0;
+                timer.html(convertSecs(timeLeft));
+                timeStudied.html(`total time studied - ${total/60} min`);
                 new Audio("bell.mp3").play();
                 running = !running;
 
