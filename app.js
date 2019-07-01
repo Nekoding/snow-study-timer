@@ -1,6 +1,6 @@
 var counter = 0;
 var timeLeft = 60;
-var maximalStudyTime = 10*60 //Zehn Minuten ist das längste was geht
+var maximalStudyTime = 9*60 //neun Minuten ist das längste was geht
 var running = false;
 var timer = $("#timer");
 var button = $("#starter");
