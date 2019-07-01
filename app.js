@@ -1,8 +1,9 @@
 var counter = 0;
 var timeLeft = 60;
+var maximalStudyTime = 10*60 //Zehn Minuten ist das längste was geht
 var running = false;
 var timer = $("#timer");
-var button = $("starter");
+var button = $("#starter");
 var progress = $("#prog");
 var timeStudied = $("#timeStudied");
 var score = 0;
@@ -39,6 +40,10 @@ $("#starter").click(function () {
                 clearInterval(interval);
                 progress.css({width:"0%"});
                 total += timeLeft;
+                //Beschränke Maximale Lernzeit
+                if (timeLeft == maximalStudyTime){
+                    timeLeft = 0;
+                }
                 timeLeft += 60;
                 counter = 0;
                 timer.html(convertSecs(timeLeft));
@@ -48,6 +53,6 @@ $("#starter").click(function () {
 
 
             }
-        }, 1000);
+        }, 10);
     }
 })
