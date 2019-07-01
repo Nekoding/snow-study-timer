@@ -53,6 +53,6 @@ $("#starter").click(function () {
 
 
             }
-        }, 10);
+        }, 1000);
     }
 })
